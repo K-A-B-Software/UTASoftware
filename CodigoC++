@@ -1,0 +1,87 @@
+# UTASoftware
+//codigo hecho en c++
+#include
+using namespace std;
+int main() {
+// Definición de variables
+float analisis, diseno, codificacion, promedio, notaFinal;
+float avance;
+int errores;
+char docCompleta, exposicion;
+string nombre;
+string estado, observacion = "ninguna";
+float ajustes = 0;
+// Entrada de datos
+cout<<"Ingrese el nombre del estudiante: "<<endl;
+cin>>nombre;
+cout << "Ingrese nota de analisis: "<<endl;
+cin >> analisis;
+cout << "Ingrese nota de diseño: "<<endl;
+cin >> diseno;
+cout << "Ingrese nota de codificacion: "<<endl;
+cin >> codificacion;
+cout << "Ingrese porcentaje de avance real: "<<endl;
+cin >> avance;
+cout << "Ingrese numero de errores detectados: "<<endl;
+cin >> errores;
+cout << "¿Presento documentacion completa? (S/N): "<<endl;
+cin >> docCompleta;
+cout << "¿Realizo exposicion final? (S/N): "<<endl;
+cin >> exposicion;
+// Validación de notas
+if (analisis < 0 || analisis > 10 ||
+diseno < 0 || diseno > 10 ||
+codificacion < 0 || codificacion > 10) {
+cout << "Error: Las notas deben estar entre 0 y 10" << endl;
+} else {
+// Cálculo del promedio técnico
+promedio = (analisis + diseno + codificacion) / 3;
+// Ajustes por errores
+ajustes = ajustes - (errores * 0.5);
+// Ajustes por documentación
+if (docCompleta == 'S' || docCompleta == 's') {
+ajustes = ajustes + 0.5;
+}
+// Ajustes por exposición
+if (exposicion == 'S' || exposicion == 's') {
+ajustes = ajustes + 0.5;
+}
+// Nota final
+notaFinal = promedio + ajustes;
+// Límites de la nota
+if (notaFinal > 10) {
+notaFinal = 10;
+}
+if (notaFinal < 0) {
+notaFinal = 0;
+}
+// Determinar estado
+if (notaFinal >= 9) {
+estado = "Excelente";
+} else if (notaFinal >= 7) {
+estado = "Aprobado";
+} else if (notaFinal >= 5) {
+estado = "Recuperacion";
+} else {
+estado = "Reprobado";
+}
+// Regla del avance
+if (avance < 60 && estado == "Excelente") {
+estado = "Aprobado";
+}
+// Observación por falta de documentación
+if (notaFinal >= 7 && (docCompleta == 'N' || docCompleta == 'n')) {
+observacion = "Buen producto, pero mala formalidad";
+}
+// Salida
+cout << "Promedio tecnico: " << promedio << endl;
+cout << "Ajustes aplicados: " << ajustes << endl;
+cout << "Nota final: " << notaFinal << endl;
+cout << "Estado: " << estado << endl;
+cout << "Observacion: " << observacion << endl;
+}
+return 0;
+}
+}
+return 0;
+}
