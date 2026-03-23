@@ -1,0 +1,86 @@
+Algoritmo EvaluacionProyecto
+// Definición de variables
+Definir analisis, diseno, codificacion, promedio, notaFinal Como Real
+Definir avance Como Real
+Definir errores Como Entero
+Definir docCompleta, exposicion Como Caracter
+Definir estado, observacion Como Caracter
+Definir ajustes Como Real
+ajustes <- 0
+observacion <- "Ninguna"
+// Entrada de datos
+Escribir "Ingrese nota de análisis:"
+Leer analisis
+Escribir "Ingrese nota de diseño:"
+Leer diseno
+Escribir "Ingrese nota de codificación:"
+Leer codificacion
+Escribir "Ingrese porcentaje de avance real:"
+Leer avance
+Escribir "Ingrese número de errores detectados:"
+Leer errores
+Escribir "¿Presentó documentación completa? (S/N):"
+Leer docCompleta
+Escribir "¿Realizó exposición final? (S/N):"
+Leer exposicion
+// Validación de notas
+Si analisis < 0 O analisis > 10 O diseno < 0 O diseno > 10 O codificacion < 0
+Ocodificacion > 10 Entonces
+Escribir "Error: Las notas deben estar entre 0 y 10"
+SiNo
+// Cálculo del promedio técnico
+promedio <- (analisis + diseno + codificacion) / 3
+// Ajustes por errores
+ajustes <- ajustes - (errores * 0.5)
+// Ajustes por documentación
+Si docCompleta = "S" Entonces
+ajustes <- ajustes + 0.5
+FinSi
+// Ajustes por exposición
+Si exposicion = "S" Entonces
+ajustes <- ajustes + 0.5
+FinSi
+// Nota final
+notaFinal <- promedio + ajustes
+// Límites de la nota
+Si notaFinal > 10 Entonces
+notaFinal <- 10
+FinSi
+UNIVERSIDAD TÉCNICA DE AMBATO
+FACULTAD DE INGENIERÍA EN SISTEMAS, ELECTRÓNICA E INDUSTRIAL
+CARRERA DE SOFTWARE
+Cdla. Universitaria (Predios Huachi) / Casilla 334 / Telefax: 03-2851894 – 2411537, Correo Electrónico: Elija un elemento.
+AMBATO-ECUADOR
+Si notaFinal < 0 Entonces
+notaFinal <- 0
+FinSi
+// Determinar estado
+Si notaFinal >= 9 Entonces
+estado <- "Excelente"
+Sino
+Si notaFinal >= 7 Entonces
+estado <- "Aprobado"
+Sino
+Si notaFinal >= 5 Entonces
+estado <- "Recuperación"
+Sino
+estado <- "Reprobado"
+FinSi
+FinSi
+FinSi
+// Regla del avance
+Si avance < 60 Y estado = "Excelente" Entonces
+estado <- "Aprobado"
+FinSi
+// Observación por falta de documentación
+Si notaFinal >= 7 Y docCompleta = "N" Entonces
+observacion <- "Buen producto, pero mala formalidad"
+FinSi
+// Salida
+Escribir "Promedio técnico: ", promedio
+Escribir "Ajustes aplicados: ", ajustes
+Escribir "Nota final: ", notaFinal
+Escribir "Estado: ", estado
+Escribir "Observación: ", observacion
+FinSi
+FinAlgoritmo 
