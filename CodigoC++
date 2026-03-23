@@ -82,6 +82,3 @@ cout << "Observacion: " << observacion << endl;
 }
 return 0;
 }
-}
-return 0;
-}
