@@ -1,8 +1,19 @@
+Integrantes del grupo I
+Nuñez Espin Bryan Sebastian
+Verdesoto Azogue Kevin Alexander
+Narvaez Gavilanes Antonella Nicole
+
+Caso Asignado: Ahorcado de productos, promociones, ventas y devoluciones.
+
 # Juego del Ahorcado
 
 Este es un programa de un juego clasico conocido como el juego del ahorcado.
 Desarrollado como parte de mis prácticas de programación con mi grupo.
 El objetivo es adivinar la palabra oculta vasadas en el ambito de la contabilidad antes de que se completen los intentos permitidos.
+
+# Contexto del caso a desarrollar
+
+Controlar productos, ventas, promociones, devoluciones, utilidad y anomalías comerciales.
 
 # Funciones del programa
 - Selección aleatoria de palabras desde una lista predefinida elejida a nuestra necesidad.
