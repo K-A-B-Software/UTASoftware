@@ -1,1 +1,20 @@
+# Juego del Ahorcado
 
+Este es un programa de un juego clasico conocido como el juego del ahorcado.
+Desarrollado como parte de mis prácticas de programación con mi grupo.
+El objetivo es adivinar la palabra oculta vasadas en el ambito de la contabilidad antes de que se completen los intentos permitidos.
+
+# Funciones del programa
+- Selección aleatoria de palabras desde una lista predefinida elejida a nuestra necesidad.
+- Validación de entradas (solo permitir letras y evitar repeticiones).
+- Visualización gráfica del ahorcado.
+- Contador de intentos restantes.
+- Visualizacion de victoria o derrota.
+
+# Tecnologías utilizadas
+- Programa y lenjuage en c++
+
+# Requisitos
+Para ejecutar este programa necesitamos:
+- Tener un compilador de c++.
+- Un terminal o consola de comandos.
