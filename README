@@ -15,6 +15,10 @@ El objetivo es adivinar la palabra oculta vasadas en el ambito de la contabilida
 
 Controlar productos, ventas, promociones, devoluciones, utilidad y anomalías comerciales.
 
+# Correccion de un fragmento de codigo
+
+Correccion de un codigo proporsionado por el ing con caso de prueba.
+
 # Funciones del programa
 - Selección aleatoria de palabras desde una lista predefinida elejida a nuestra necesidad.
 - Validación de entradas (solo permitir letras y evitar repeticiones).
